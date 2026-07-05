@@ -27,8 +27,8 @@ public class demo {
                     switch (choice) {
                         case 1:
                             System.out.println("Your balance is:" );
-                            System.out.println("********************"); showBalance(balance);
-                           
+                            System.out.println("********************"); 
+                            showBalance(balance);
                             break;
                             
                         case 2:
@@ -59,47 +59,47 @@ public class demo {
         scanner.close();
     }
 
-    // show current balance
-        static void showBalance(double balance) {
-            System.out.printf("R%.2f%n", balance);
-        }
+        // show current balance
+            static void showBalance(double balance) {
+                System.out.printf("R%.2f%n", balance);
+            }
 
-    //show deposited amount
-        static double deposit(Scanner scanner , double balance){
-            double amount;
+        //show deposited amount
+            static double deposit(Scanner scanner , double balance){
+                double amount;
 
-            System.out.println("Enter amount to deposit: ");
-            amount = scanner.nextDouble();
+                System.out.println("Enter amount to deposit: ");
+                amount = scanner.nextDouble();
 
-            if (amount < 0) {
-                System.out.println("Invalid deposit amount. Please enter a positive value.");
-                return 0;
+                if (amount < 0) {
+                    System.out.println("Invalid deposit amount. Please enter a positive value.");
+                    return 0;
+                    
+                } else {
+                    return amount;
+                }
                 
-            } else {
-                return amount;
             }
-            
-        }
 
-    //show withdrawn amount 
-        static double withdraw(double balance){
-            double amount;
+        //show withdrawn amount 
+            static double withdraw(double balance){
+                double amount;
 
-            System.out.println("Enter amount to withdraw:");
-            amount = new Scanner(System.in).nextDouble();
+                System.out.println("Enter amount to withdraw:");
+                amount = new Scanner(System.in).nextDouble();
 
-            if (amount > balance) {
-                System.out.println("Insufficient funds. Please enter a smaller amount.");
-                return 0;
+                if (amount > balance) {
+                    System.out.println("Insufficient funds. Please enter a smaller amount.");
+                    return 0;
 
-            } else if (amount < 0) {
-                System.out.println("Invalid withdrawal amount. Please enter a positive value.");
-                return 0;
+                } else if (amount < 0) {
+                    System.out.println("Invalid withdrawal amount. Please enter a positive value.");
+                    return 0;
 
 
-            } else {
-                return amount;
+                } else {
+                    return amount;
 
+                }
             }
-        }
-}
+    }
