@@ -24,38 +24,38 @@ public class demo {
             //get and process user input
                 System.out.print("Please enter your choice (1 to 4): ");
                 choice = scanner.nextInt();
-                switch (choice) {
-                    case 1:
-                        System.out.println("Your balance is:" );
-                        System.out.println("********************");
-                        showBalance(balance);
-                        break;
-                        
-                    case 2:
-                        System.out.print("Enter amount to deposit: ");
-                        balance = balance + deposit(scanner, balance);
-                        System.out.println("********************");
-                        break;
-                        
-                    case 3:
-                        System.out.print("Enter amount to withdraw: ");
-                        balance = balance - withdraw(balance);
-                        System.out.println("********************");
-                        break;
+                    switch (choice) {
+                        case 1:
+                            System.out.println("Your balance is:" );
+                            System.out.println("********************"); showBalance(balance);
+                           
+                            break;
+                            
+                        case 2:
+                            System.out.print("Enter amount to deposit: ");
+                            balance = balance + deposit(scanner, balance);
+                            System.out.println("********************");
+                            break;
+                            
+                        case 3:
+                            System.out.print("Enter amount to withdraw: ");
+                            balance = balance - withdraw(balance);
+                            System.out.println("********************");
+                            break;
 
-                    case 4:
-                        isRunning = false;
-                        System.out.println("Thank you for using the ATM. Goodbye!");
-                        System.out.println("********************");
-                        break;
+                        case 4:
+                            isRunning = false;
+                            System.out.println("Thank you for using the ATM. Goodbye!");
+                            System.out.println("********************");
+                            break;
 
-                    default:
-                        System.out.println("Invalid choice. Please try again.");
-                        System.out.println("********************");
+                        default:
+                            System.out.println("Invalid choice. Please try again.");
+                            System.out.println("********************");
+                    }
                 }
-            }
-        
-        
+                
+
         scanner.close();
     }
 
